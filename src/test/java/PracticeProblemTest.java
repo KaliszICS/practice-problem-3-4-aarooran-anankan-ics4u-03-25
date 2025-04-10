@@ -19,7 +19,7 @@ void recamanTest6() {
         fail("Method does not exist");
 }
     catch(Exception e) {
-        fail("Something weird happened");
+        fail(e);
 }
 }
 @Test
@@ -38,7 +38,7 @@ void recamanTest5() {
         fail("Method does not exist");
 }
     catch(Exception e) {
-        fail("Something weird happened");
+        fail(e);
 }
 }
 @Test
@@ -57,7 +57,7 @@ void recamanTest4() {
         fail("Method does not exist");
 }
     catch(Exception e) {
-        fail("Something weird happened");
+        fail(e);
 }
 }
 @Test
@@ -76,7 +76,7 @@ void recamanTest3() {
         fail("Method does not exist");
 }
     catch(Exception e) {
-        fail("Something weird happened");
+        fail(e);
 }
 }
 @Test
@@ -95,7 +95,7 @@ void recamanTest2() {
         fail("Method does not exist");
 }
     catch(Exception e) {
-        fail("Something weird happened");
+        fail(e);
 }
 }
 @Test
@@ -114,7 +114,7 @@ void recamanTest1() {
         fail("Method does not exist");
 }
     catch(Exception e) {
-        fail("Something weird happened");
+        fail(e);
 }
 }
 }

@@ -1,27 +1,47 @@
 public class PracticeProblem {
 
-	public static void main(String args[]) {
+	public static void main(String args[]) {}
 
+	public static int[] recaman(int n) {
+
+		if (n < 1) {
+			return new int[0];
+		}
+
+		int[] intArr = new int[n];
+
+		recamanHelper(n, intArr);
+
+		return intArr;
 	}
 
-	public static void q1() {
-		//Write question 1 code here
-	}
+	public static void recamanHelper(int n, int[] intArr) {
 
-	public static void q2() {
-		//Write question 2 code here
-	}
+		if (n==1) {
+			intArr[n-1] = n;
+			return;
+		}
 
-	public static void q3() {
-		//Write question 3 code here
-	}
+		recamanHelper(n-1, intArr);
 
-	public static void q4() {
-		//Write question 4 code here
-	}
+		boolean exists = false;
+		int x = intArr[n-2]-n;
 
-	public static void q5() {
-		//Write question 5 code here
+		if (x > 0) {
+			for (int i=0; i<n-1; i++) {
+				if (intArr[i]==x) {
+					exists = true;
+				}
+			}
+			if (!exists) {
+				intArr[n-1] = x;
+			}
+			else {
+				intArr[n-1] = x + 2*n;
+			}
+		}
+		else {
+			intArr[n-1] = x + 2*n;
+		}
 	}
-
 }
